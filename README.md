@@ -24,7 +24,14 @@ https://www.runoob.com/mongodb/mongodb-osx-install.html
 cd hello
 npm install
 ```
-### 
+### 创建后端env环境
+```bash
+pip install virtualenv
+```
+macOS/Linux：
+`source venv/bin/activate`
+Windows：
+`venv\Scripts\activate.bat`
 ### 后端env环境依赖安装
 ```bash
 cd python-book-backend
@@ -32,8 +39,8 @@ cd python-book-backend
 pip install -r requirement
 ```
 ## 运行
-开启mongodb服务
-
+开启mongodb服务（在管理员终端执行以下命令）
+`network start mongodb`
 ```bash
 # 开启前端项目
 cd hello
