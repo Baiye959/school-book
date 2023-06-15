@@ -1,1 +1,2 @@
-python-book-backend/__pycache__
+*/__pycache__/*
+python-book-backend\venv
