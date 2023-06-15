@@ -2,10 +2,12 @@ from fastapi import FastAPI
 from routes.user import user
 from routes.book import book
 from fastapi.middleware.cors import CORSMiddleware
+# from routes.sms_router import router as sms_router
 
 app = FastAPI()
 app.include_router(user)
 app.include_router(book)
+# app.include_router(sms_router)
 
 origins = [
     "http://localhost",

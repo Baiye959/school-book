@@ -2,6 +2,8 @@
 import { ref } from "vue";
 import { reactive } from 'vue';
 import { createBook } from '../api';
+// import { createBook, sendSms } from '../api';
+
 
 const hasUser = ref(false);
 function login(event) {
@@ -12,6 +14,7 @@ function logout(event) {
   console.log(event);
   hasUser.value = false;
 }
+
 
 const form = reactive({
   name: '',
@@ -70,6 +73,15 @@ async function onSubmit() {
   }
 
   await createBook(book);
+  // const phoneNumber = form.tel;
+  // const message = form.name 
+  //   + form.sex=='男'?'先生':'女士'
+  //   +'，您发送了预约请求：'+form.reason
+  //   +'，预约时间：'+String(form.booktime)
+  //   +'。请等待通过';
+
+  // await sendSms(phoneNumber, message);
+
 
   form.name = '';
   form.sex = '';
